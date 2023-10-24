@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial.FlyoutPageDemo"
+             FlyoutLayoutBehavior="Popover">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Flyout Submenu"
+                     BackgroundColor="Aqua">
+            <Label Text="Submenu"
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <ContentPage Title="Flyout Submenu" 
+                     BackgroundColor="Yellow">
+            <Label Text="Detalhes"
+                   TextColor="Black"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+        </ContentPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
