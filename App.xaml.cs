@@ -11,6 +11,6 @@ public partial class App : Application
         navPage.BarBackground = Colors.Yellow;
         navPage.BarTextColor = Colors.Blue;
         
-        MainPage = new TabbedPageDemo();
+        MainPage = new NavigationPage(new StackLayoutDemo());
     }
 }
