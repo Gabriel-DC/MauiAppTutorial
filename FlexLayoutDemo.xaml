@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial.FlexLayoutDemo"
+             Title="FlexLayoutDemo">
+    <FlexLayout Direction="Column">
+
+        <Label Text="Cabeçalho" FontSize="Large" Background="Aqua"
+               HorizontalTextAlignment="Center"/>
+
+        <FlexLayout FlexLayout.Grow="1">
+            <Label Text="Conteúdo"
+                   FontSize="Large"
+                   Background="Gray"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FlexLayout.Grow="1"/>
+
+            <BoxView FlexLayout.Basis="50"
+                     Color="Blue"
+                     FlexLayout.Order="-1"/>
+
+            <BoxView FlexLayout.Basis="50"
+                     Color="Green"/>
+        </FlexLayout>
+
+        <Label Text="Rodapé"
+               FontSize="Large"
+               BackgroundColor="Yellow"
+               HorizontalTextAlignment="Center"/>
+
+        <!--<Label FlexLayout.AlignSelf="Center" Text="Level 1" BackgroundColor="Red"/>
+        <Label FlexLayout.AlignSelf="Start" Text="Level 2" BackgroundColor="Blue"/>
+        <Label FlexLayout.AlignSelf="End" Text="Level 3" BackgroundColor="Yellow"/>
+        <Label Text="Level 4" BackgroundColor="Orange"/>
+        <Label Text="Level 5" BackgroundColor="Aqua"/>
+        <Label Text="Level 6" BackgroundColor="Salmon"/>
+        <Label Text="Level 7" BackgroundColor="BlanchedAlmond"/>-->
+    </FlexLayout>
+    
+    
+</ContentPage>
