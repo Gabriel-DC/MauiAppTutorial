@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial.Controls.PresentationControls"
+             Title="PresentationControls">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+
+            <BoxView Color="CornflowerBlue"
+                 CornerRadius="20"
+                 WidthRequest="160"
+                 HeightRequest="160"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Start"/>
+
+            <Label Text="Bem-vindo ao .Net Maui"
+               CharacterSpacing="2"
+               BackgroundColor="Yellow"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               FontSize="Large"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+
+            <Label Text="Este texto está em &lt;strong&gt;HTML&lt;/strong&gt;"
+               TextType="Html"
+               BackgroundColor="Yellow"
+               TextColor="Black"
+               FontSize="Large"/>
+
+            <Label Text="Texto sublinhado"
+               FontSize="Large"
+               TextDecorations="Underline"/>
+
+            <Label Text="Texto sublinhado e Tachado"
+               FontSize="Large"
+               TextDecorations="Underline,Strikethrough"/>
+
+            <Label Text="Este texto está em lowercase"
+               FontSize="Large"
+               TextTransform="Lowercase"/>
+
+            <Label Text="Este texto está em Uppercase"
+               FontSize="Large"
+               TextTransform="Uppercase"/>
+
+            <Ellipse Fill="Yellow"
+                     Stroke="Blue"
+                     StrokeThickness="10"
+                     HeightRequest="100"
+                     WidthRequest="100"
+                     HorizontalOptions="Center"/>
+
+            <Line Stroke="Black"
+                  X1="0"
+                  Y1="0"
+                  X2="300"
+                  Y2="50"
+                  StrokeThickness="5"/>
+
+            <Rectangle Fill="DarkRed"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       HorizontalOptions="End"
+                       RadiusX="5"
+                       RadiusY="5"/>
+
+            <Border Stroke="#C49833"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 40,0,0,40"
+                    Background="#2B0B98"
+                    Padding="16,8"
+                    HorizontalOptions="Center">
+                                
+                <Label Text="Bem-vindo ao .NET Maui"
+                       TextColor="White"
+                       FontSize="10"
+                       FontAttributes="Bold"/>
+                
+            </Border>
+
+            <Image Source="dotnet_bot"/>
+
+            <Image Source="https://media1.giphy.com/media/33zX3zllJBGY8/giphy.gif"
+                   Aspect="AspectFill"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   IsAnimationPlaying="True"/>
+
+            <Frame BorderColor="Gray"
+                   CornerRadius="10"
+                   Padding="8">
+
+                <StackLayout>
+                    <Label Text="Exemplo Card"
+                           FontSize="30"
+                           FontAttributes="Bold"/>
+
+                    <BoxView Color="Gray"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill"/>
+
+                    <Label Text="Usando Frame e StackLayout"
+                           FontSize="20"/>
+                </StackLayout>
+            </Frame>
+
+            <WebView HeightRequest="500"
+                     Source="https://macoratti.net"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

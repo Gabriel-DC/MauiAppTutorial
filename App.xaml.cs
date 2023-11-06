@@ -1,4 +1,6 @@
-﻿namespace MauiAppTutorial;
+﻿using MauiAppTutorial.Controls;
+
+namespace MauiAppTutorial;
 
 public partial class App : Application
 {
@@ -11,6 +13,6 @@ public partial class App : Application
         navPage.BarBackground = Colors.Yellow;
         navPage.BarTextColor = Colors.Blue;
         
-        MainPage = new NavigationPage(new AbsoluteLayoutDemo());
+        MainPage = new NavigationPage(new PresentationControls());
     }
 }
