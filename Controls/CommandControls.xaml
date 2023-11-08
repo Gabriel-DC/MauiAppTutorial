@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial.Controls.CommandControls"
+             Title="Command Controls">
+
+    <VerticalStackLayout Margin="10">
+
+        <Button Text="Clique"
+                x:Name="BtnDemo"
+                BackgroundColor="BlueViolet"
+                Clicked="BtnDemo_Clicked"
+                TextColor="White"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <Label x:Name="LblDemo"
+               Text=".NET MAUI"
+               TextColor="Blue"
+               FontSize="25"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+
+        <ImageButton
+            Source="dotnet_bot"
+            x:Name="BtnImageDemo"
+            HeightRequest="200"
+            WidthRequest="200"
+            Aspect="AspectFit"
+            Clicked="BtnImageDemo_Clicked"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+        <StackLayout>
+            <Label
+                Text="Qual o seu animal favorito?"
+                FontSize="Large"
+                TextColor="Blue"/>
+
+            <RadioButton Content="Gato" CheckedChanged="RadioButton_CheckedChanged" Value="Gato"/>
+            <RadioButton Content="Cachorro" CheckedChanged="RadioButton_CheckedChanged" Value="Cachorro"/>
+            <RadioButton Content="Galo" CheckedChanged="RadioButton_CheckedChanged" Value="Galo" IsChecked="True"/>
+
+            <Label x:Name="LblSelectedPet" Text="" />
+
+        </StackLayout>
+
+        <SearchBar
+            Placeholder="Pesquisar"/>
+
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem
+                        BackgroundColor="LightGreen"
+                        IconImageSource="dotnet_bot"
+                        Invoked="SwipeItem_Invoked"
+                        Text="Gato"/>
+
+                    <SwipeItem
+                        BackgroundColor="LightPink"
+                        IconImageSource="dotnet_bot"
+                        Invoked="SwipeItem_Invoked"
+                        Text="Galo"/>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+
+            <SwipeView.RightItems>
+                <SwipeItem
+                    BackgroundColor="LemonChiffon"
+                    IconImageSource="dotnet_bot"
+                    Invoked="SwipeItem_Invoked"
+                    Text="Cachorro">
+                </SwipeItem>
+            </SwipeView.RightItems>
+            <Grid
+                BackgroundColor="LightGray"
+                HeightRequest="60"
+                WidthRequest="300">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="&lt;== Deslizar ==>"
+                    FontSize="Large"
+                    VerticalOptions="Center"/>
+
+            </Grid>
+        </SwipeView>
+
+    </VerticalStackLayout>
+</ContentPage>
