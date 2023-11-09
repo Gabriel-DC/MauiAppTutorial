@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial.Controls.SetValueControls"
+             Title="Set Value Controls">
+    <VerticalStackLayout
+        x:Name="Layout">
+        
+        <Label 
+            Text="Clique no CheckBox"
+            />
+
+        <CheckBox
+            x:Name="CheckBox1"
+            IsChecked="True"
+            Color="Green"
+            CheckedChanged="CheckBox1_CheckedChanged"
+            HorizontalOptions="Start"/>
+
+        <StackLayout
+            Padding="40">
+
+            <Label
+                x:Name="LblSlider"
+                HorizontalOptions="Center"/>
+
+            <Slider
+                x:Name="Slider1"
+                Minimum="0"
+                Maximum="10"
+                MinimumTrackColor="Yellow"
+                MaximumTrackColor="Green"
+                ThumbImageSource="dotnet_bot"
+                ThumbColor="DarkRed"
+                ValueChanged="Slider1_ValueChanged"/>
+        </StackLayout>
+
+        <StackLayout Margin="10">
+
+            <Stepper
+                x:Name="Stepper1"
+                Minimum="2"
+                Maximum="10"
+                Increment="2"
+                ValueChanged="Stepper1_ValueChanged"
+                HorizontalOptions="Start"/>
+
+            <Label x:Name="LblStepper" HorizontalOptions="Start"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Label
+                x:Name="LblSwitch"
+                Text="Switch"
+                HorizontalOptions="Start"/>
+
+            <Switch
+                x:Name="Switch1"
+                IsToggled="True"
+                OnColor="Black"
+                Toggled="Switch1_Toggled"
+                ThumbColor="Green"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <DatePicker
+            MinimumDate="01/01/2022"
+            MaximumDate="12/31/2022"
+            HorizontalOptions="Center"
+            Date="06/21/2022"
+            DateSelected="DatePicker_DateSelected"
+            Format="dd/MM/yyyy"/>
+
+        <TimePicker
+            x:Name="Time1"
+            Time="10:45:25"
+            Format="HH:mm:ss"
+            PropertyChanged="Time1_PropertyChanged"
+            HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -13,6 +13,6 @@ public partial class App : Application
         navPage.BarBackground = Colors.Yellow;
         navPage.BarTextColor = Colors.Blue;
         
-        MainPage = new NavigationPage(new CommandControls());
+        MainPage = new NavigationPage(new SetValueControls());
     }
 }
