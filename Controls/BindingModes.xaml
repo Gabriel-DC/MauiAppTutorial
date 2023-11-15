@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial.Controls.BindingModes"
+             Title="BindingModes">
+    <VerticalStackLayout>
+
+        <Entry
+            x:Name="Origem"
+            FontSize="30"
+            Placeholder="Origem"
+            Text="Origem"/>
+
+        <Entry
+            x:Name="Destino"
+            FontSize="30"
+            Placeholder="Destino"
+            Text="{Binding Source={x:Reference Origem},
+                    Path=Text, Mode=TwoWay}"/>
+
+    </VerticalStackLayout>
+</ContentPage>
