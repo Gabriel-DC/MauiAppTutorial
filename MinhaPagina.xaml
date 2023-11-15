@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MauiAppTutorial.Models"
              x:Class="MauiAppTutorial.MinhaPagina"
-             Title="MinhaPagina">
+             Title="Minha Pagina">
+
+    <!--<ContentPage.Resources>
+        <models:Produto x:Key="product"
+                        Nome="Iphone 5"
+                        Preco="9999.99"
+                        Estoque="333"/>
+    </ContentPage.Resources>-->
+
+    <ContentPage.BindingContext>
+        <models:Produto x:Name="product"
+                        Nome="Iphone 10"
+                        Preco="9999.99"
+                        Estoque="333"/>
+    </ContentPage.BindingContext>
+
     <VerticalStackLayout>
-        <Label 
-            Text="Bem-VIndo ao .NET MAUI!"
+
+        <Label
+            x:Name="LblNome"
+            Text="{Binding Source={x:Reference product},
+                Path=Nome}"
             FontSize="Large"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-            
-        <Button
-            Text="Navegar para outra página"
-            Clicked="Button_OnClicked"
+
+        <Label
+            x:Name="LblPreco"
+            Text="{Binding Source={x:Reference product},
+                Path=Preco,
+                StringFormat='R$ {0:F2}'}"
+            FontSize="Large"
+            VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Label
+            x:Name="LblEstoque"
+            Text="{Binding Source={x:Reference product},
+                Path=Estoque,
+                StringFormat='Quantidade: {0}'}"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <!--<Label
+            x:Name="LblNome"
+            Text="{Binding Nome, Source={StaticResource product}}"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            x:Name="LblPreco"
+            Text="{Binding Preco, Source={StaticResource product}}"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            x:Name="LblEstoque"
+            Text="{Binding Estoque, Source={StaticResource product}}"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />-->
+
+        <Button
+            x:Name="BtnBind"
+            Text="Clique para realizar o DataBinding"            
+            HorizontalOptions="Center" />
+        
     </VerticalStackLayout>
 </ContentPage>
